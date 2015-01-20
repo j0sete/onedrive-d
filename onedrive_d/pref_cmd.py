@@ -122,4 +122,8 @@ class OneDrive_PreferenceDialog:
 		self.show_log_path_dialog()
 		self.show_ignore_list_dialog()
 		config.save_config()
+		
+		#Add this line somewhere your project to create a command to the user
+		subprocess.call(["ln","-s",os.getcwd()+"/main.py","/bin/onedrive-d"])
+		
 		print('\nAll steps have been gone through.')
