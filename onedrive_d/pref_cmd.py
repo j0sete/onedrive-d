@@ -121,5 +121,9 @@ class OneDrive_PreferenceDialog:
 		self.show_basedir_dialog()
 		self.show_log_path_dialog()
 		self.show_ignore_list_dialog()
+		
+		#try to set this in somewhere your project, just to have the command at bin (sorry for my english)
+		call(["ln","-s",os.getcwd()+"/main.py","/bin/onedrive-d"])
+		
 		config.save_config()
 		print('\nAll steps have been gone through.')
